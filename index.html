@@ -1,43 +1,107 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+		integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-	<div style="height: 100%;background-color: black;">
+	<title>Hello, world!</title>
+</head>
+
+<body>
+	<div style="height: 100%;background-color: black;" id="front">
+		<div class="row align-items-center" style="width: 100%; text-align: center; height: 100%;">
+			<div class="col col-1" style="background-color: black; height: 100%;">
+
+			</div>
+
+			<div class="col col-10" style="color: white; font-family: 'Roboto', sans-serif; font-size:200%;">
+				<span style="display: inline;">Hello, </span>
+				<span style="display: inline;">
+				<input id="input" autocomplete="off" type="text" style="background-color: black;  outline: 0; color: white;
+				border-width: 0 0 2px; line-height: normal; min-width:85px;
+				border-color: white;width:8%; text-align: center;" /><span> ! </span><i class="fas fa-globe-europe" style="color: white"></i>
+				</span>
+			</div>
+			<div class="col col-1"style="background-color: black; height: 100%;">
+			</div>
+		</div>
+	</div>
+	<div style="height: 100%; display:none" id="second">
 		<div class="row align-items-center" style="width: 100%; text-align: center; height: 100%;">
 			<div class="col">
-			  
+
 			</div>
-			
-			<div class="col" style="color: white; font-family: 'Roboto', sans-serif; font-size:200%;">
-				<span style="display: inline;">Hello, </span>
-				<input type="text" style="background-color: black;  outline: 0; color: white;
-				border-width: 0 0 2px; line-height: normal; 
-				border-color: white;width:22%"/><span> ! </span><i class="fas fa-globe-europe" style="color: white"></i>
+			<div class="col" style=" font-family: 'Roboto', sans-serif; font-size:200%;">
+				<h1>Welcome :)</h1>
 			</div>
 			<div class="col">
-			  
 			</div>
-		  </div>
-</div>
+		</div>
+	</div>
+	<div style="height: 100%; display:none" id="third">
+		<div class="row align-items-center" style="width: 100%; text-align: center; height: 100%;">
+			<div class="col">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+			</div>
+			<div class="col" style=" font-family: 'Roboto', sans-serif; font-size:200%;">
+				<h1>Here comes the content</h1><i class="fas fa-tools"></i> 
+			</div>
+			<div class="col">
+			</div>
+		</div>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+		$("#input").keyup(function (e) {
+			var code = e.which; // recommended to use e.which, it's normalized across browsers
+			if (code == 13) e.preventDefault();
+			if (code == 13) {
+				value = $(this).val();
+				if (value.toUpperCase() === "WORLD") { fader() }
+				else {
+					$(this).addClass('error');
+					setTimeout(function () {
+						$("#input").removeClass('error');
+					}, 300);
+				}
+			}
+
+		});
+
+		function fader() {
+  $("#front").fadeOut(2000).promise().done(function(){
+     $("#second").hide().fadeIn(2000).promise().done(function(){
+     $("#second").fadeOut(2000).promise().done(function(){
+     $("#third").hide().fadeIn(2000);});}); });
+
+  
+}
+	</script>
+</body>
+
 </html>
