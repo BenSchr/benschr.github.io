@@ -128,7 +128,9 @@
 			if (code == 13) e.preventDefault();
 			if (code == 13) {
 				value = $(this).val();
-				if (value.toUpperCase() === "WORLD") { fader() }
+				if (value.toUpperCase() === "WORLD") { 
+					$(this).blur();
+					fader() }
 				else {
 					$(this).addClass('error');
 					setTimeout(function () {
