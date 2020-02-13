@@ -1,0 +1,244 @@
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+    <title>Title</title>
+</head>
+
+<body>
+
+    <div class="row align-items-center" style="width: 100%; text-align: center; height: 100%; margin:0">
+
+        <!-- COL 1 -->
+
+        <div class="col col-lg-4 col-12" style="background-color: white; ">
+            <div class="row canvasrow" style="width: 100%; text-align: center; ">
+
+
+                <!-- Current GEN -->
+
+                <div class="col col-6 col-lg-12 " style="height:50%">
+                    <div>Current Generation</div>
+                    <canvas id="myCanvas" class="canvas" width="600" height="600" style="border:1px solid #d3d3d3;">
+                        Your browser does not support the canvas element.
+                    </canvas>
+                </div>
+
+                <!-- BEST GEN -->
+
+                <div class="col col-6 col-lg-12" style="height:50%">
+                    <div>Best Generation</div>
+                    <canvas id="myCanvas2" class="canvas" width="600" height="600" style="border:1px solid #d3d3d3; ">
+                        Your browser does not support the canvas element.
+                    </canvas>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- COL 2 -->
+        <div class="col col-lg-4 col-12" style="background-color: white;">
+
+
+            <div class="row"
+                style="width: 100%; text-align: center; height: 80%; font-family: 'Roboto', sans-serif; font-size:2em; margin:0">
+
+                <!-- Fitness Plot -->
+
+                <div class="col col-12" style="height:50%">
+                    <div>Current Generation</div>
+                    <canvas id="myCanvas" width="600" height="600"
+                        style="border:1px solid #d3d3d3;width: auto; height:80% ">
+                        Your browser does not support the canvas element.
+                    </canvas>
+                </div>
+
+
+                <!-- STATS -->
+
+                <div class="col-12" style="">
+                    <table class="table" style="width:60%; margin-left:20%">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Current Gen</th>
+                                <td id="stat_curgen">Mark</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Current Distance</th>
+                                <td id="stat_curdist"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Best Gen</th>
+                                <td id="stat_bestgen"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Best Distance</th>
+                                <td id="stat_bestdist"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- COL 3 -->
+        <div class="col  col-lg-3 col-12 order-first order-lg-3 " style="background-color: white; ">
+
+
+
+            <div class="row align-items-center " style="text-align: left;">
+                <div class="col-4 col-sm-5">
+                    <select class="form-control form-control-md" id="drawOpt">
+                        <option>Circle</option>
+                        <option>Random</option>
+                    </select></div>
+                <div class="col-4 col-sm-3">
+                    <input class="form-control " type="number" value="10" min=3 max=30 id="nPoints"></div>
+                <div class="col-4"><button type="button" class="btn btn-secondary  btn-md btn-block" onclick="redraw()">
+                        Redraw</button></div>
+
+            </div>
+
+
+            <div class="row align-items-center " style="text-align: left;">
+                <label for="populationSize" class="col-4 col-form-label">Population</label>
+                <div class="col-6">
+                    <input type="range" min="10" max="100" value="50" step="5" class="slider" id="populationSize"
+                        oninput="sliderchange(this)"></div>
+                <div class="col-2">50</div>
+            </div>
+            <div class="row align-items-center " style="text-align: left;">
+                <label for="eliteSize" class="col-4  col-form-label">Elite Size [%]</label>
+                <div class="col-6">
+                    <input type="range" min="5" max="100" value="10" step="5" class="slider" id="eliteSize"
+                        oninput="sliderchange(this)"></div>
+                <div class="col-2">10</div>
+            </div>
+            <div class="row align-items-center " style="text-align: left;">
+                <label for="mutationChance" class="col-4  col-form-label">Mutation<br /> Chance [%]</label>
+                <div class="col-6">
+                    <input type="range" min="0" max="100" value="10" step="5" class="slider" id="mutationChance"
+                        oninput="sliderchange(this)"></div>
+                <div class="col-2">10</div>
+
+            </div>
+
+
+
+
+
+            <button type="button" class="btn btn-secondary  btn-lg btn-block" onclick="drawLines()"> Draw Lines</button>
+            <button type="button" class="btn btn-secondary  btn-lg btn-block" onclick="calculateFittness()">Calc
+                Fitness</button>
+            <button type="button" class="btn btn-secondary  btn-lg btn-block" onclick="shuffleCities()">Shuffle
+                Cities</button>
+        </div>
+        <div class="col-md-1 order-last col-0"></div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/genalg/genpool.js"></script>
+    <script src="./js/genalg/drawer.js"></script>
+    <script>
+
+        var canvas = document.getElementById("myCanvas");
+        var npoints = 10;
+        var GA = null
+        var drawer = null
+        var cities = []
+        var drawOption = "circle"
+
+
+        function redraw() {
+            GA = new GenAlg(canvas)
+            drawer = new Drawer(canvas)
+            if (drawOption === "circle") {
+                GA.createCircleCities(npoints)
+            }
+            else { GA.createRandomCities(npoints) }
+            cities = GA.getCities()
+            drawer.drawPoints(cities)
+        }
+
+
+        function shuffleCities() {
+            cities = GA.shuffleCities()
+        }
+
+        function drawLines() {
+            drawer.drawPoints(cities)
+            drawer.drawLines(cities)
+
+        }
+
+
+        function calculateFittness() {
+
+            fitness = 0
+
+            for (i = 0; i < cities.length; i++) {
+                nextobj = (i + 1) % cities.length
+                x1 = cities[i]["x"]
+                y1 = cities[i]["y"]
+                x2 = cities[nextobj]["x"]
+                y2 = cities[nextobj]["y"]
+                distance = Math.hypot(x2 - x1, y2 - y1)
+                fitness += distance
+            }
+
+            fitness = Math.round(fitness)
+
+            document.getElementById("stat_curdist").innerHTML = fitness
+
+        }
+
+        function sliderchange(element) {
+            element.parentNode.nextElementSibling.innerHTML = element.value
+        }
+
+        $('#drawOpt').change(function () {
+
+            drawOption = this.value
+        });
+        $('#nPoints').change(function () {
+            npoints = this.value
+        });
+
+        redraw();
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,7 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Space+Mono&display=swap:300,300i,400,400i,500,500i,700,700i,900,900i');
+
+
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: rgb(46, 45, 45); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: black; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
+
 html, 
 body {
     height: 100%;
-    margin: 0;
+	margin: 0;
+	width: 100%;
 }
 
 .error {
@@ -14,3 +39,128 @@ body {
     0% { left: -5px; }
     100% { right: -5px; }
 }
+
+
+
+
+.blink {
+	display: inline;
+	width: 1px;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	  border-right: .15em solid white; /* The typwriter cursor */
+	  animation: 
+		blink-caret 1s step-end infinite;
+	}
+
+#typer-block{
+	width: 100%; font-size: 4vw; font-family: 'Space Mono', monospace;font-weight: bold; 
+	color: white; padding-left: 0%; padding-top: 10%;line-height:normal;letter-spacing: -3px;
+}
+	
+#typer {display: inline; }
+	
+	
+	/* The typing effect */
+	
+	/* The typewriter cursor effect */
+	
+	@keyframes blink-caret {
+	  from, to { border-color: transparent }
+	  50% { border-color: white }
+	}
+
+.canvas{
+	width: auto;  height: 80% }
+
+.canvasrow{
+	height:80%; font-family: 'Roboto', sans-serif; font-size:2em; margin:0
+}
+
+
+	@media screen and (max-width: 600px) {
+		#typer-block{padding-top: 30vh;font-size: 8vw;}
+	
+		.canvas{
+
+			width:100%;  height:auto		}
+
+			.canvasrow{
+				height:auto; font-family: 'Roboto', sans-serif; font-size:1em; margin:0
+			}
+	
+	}
+
+
+
+	  
+	.a, .a:visited{ color: white; text-decoration: none; }
+
+	  .arrow {
+		text-align: center;
+		margin-top: 1% 0;
+	  }
+	  .bounce {
+		-moz-animation: bounce 2s infinite;
+		-webkit-animation: bounce 2s infinite;
+		animation: bounce 2s infinite;
+	  }
+	  
+	  @keyframes bounce {
+		0%, 20%, 50%, 80%, 100% {
+		  transform: translateY(0);
+		}
+		40% {
+		  transform: translateY(-30px);
+		}
+		60% {
+		  transform: translateY(-15px);
+		}
+	  }
+
+
+
+	  /* SLIDER ---------------*/
+
+	  
+	  .slider {
+		-webkit-appearance: none;
+		width: 100%;
+		max-width: 100%;
+		vertical-align:middle;
+		border-radius: 5px;
+		background: #d3d3d3;
+		outline: none;
+		opacity: 0.7;
+		-webkit-transition: .2s;
+		transition: opacity .2s;
+		
+	  }
+	  
+	  .slider:hover {
+		opacity: 1;
+	  }
+	  
+	  .slider::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		background: rgb(37, 36, 36);
+		cursor: pointer;
+	  }
+	  
+	  .slider::-moz-range-thumb {
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		background: rgb(37, 36, 36);
+		cursor: pointer;
+	  }
+
+	  /* SLIDER-END ------------*/
+	  
+
+	  .col-form-label{
+		font-weight: bold;
+	  }
