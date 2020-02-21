@@ -11,7 +11,6 @@
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto|Space+Mono&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
 		integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
@@ -42,8 +41,8 @@
 						class="fas fa-globe-americas" style="color: white"></i>
 				</span>
 			</div>
-			<div class="col col-1" style="background-color: black; height: 100%;">
-			</div>
+			<!-- <div class="col" style="background-color: black; height: 100%;">
+			</div> -->
 		</div>
 	</div>
 	<div style="height: 100%; display:none" id="second">
@@ -92,12 +91,98 @@
 			</div>
 		</div>
 	</div>
-	<div class="row align-items-center" id="4th" style="height: 100vh;width:100%;background-color: lightcoral; display: none; text-align: center; margin:0;">
-		<div class="col-1"></div>
-		<div class="col" style=" font-family: 'Roboto', sans-serif; font-size:200%; color:white">
-			<p>Oops! A ninja stole my content!</p><i class="fas fa-user-ninja fa-2x"></i>
+
+	<div class="row align-items-top" id="4th"
+		style="min-height: 100vh;width:100%;background-color: black; display: none; margin:0; color:white; ">
+		<div class="col-2 p-0"></div>
+		<div class="col-8  align-self-end" style="border: 5px white solid; border-bottom: 0;
+			box-shadow:
+		0.08em 0 #ff0000,
+		0.16em 0 #ff7f00,
+		0.24em 0 #ffff00,
+		0.32em 0 #00ff00,
+		0.40em 0 #0000ff,
+		0.48em 0 #4b0082;
+			
+			
+			
+			">
+			<span class="header" style="white-space: wrap; font-family: 'Space Mono';">Check out the
+				<span style="font-weight: 1000;">stuff</span> I...</span></div>
+		<div class="col-2 p-0"></div>
+
+
+		<div class="col-2"></div>
+		<div class="col-1 p-0" style="border: 5px white solid; border-right: 0; min-height: 60vh;
+			box-shadow:
+		0 0.08em #ff0000,
+		0 0.16em #ff7f00,
+		0 0.24em #ffff00,
+		0 0.32em #00ff00,
+		0 0.40em #0000ff,
+		0 0.48em #4b0082;
+	
+			
+		
+		
+		">
+
 		</div>
-		<div class="col-1"></div>
+		<div class="col-6 p-0" style=" border:5px solid white; border-right:0; border-left:0; min-height: 60vh; text-align: center;
+			
+			box-shadow:
+		0 0.08em  #ff0000,
+		0 0.16em #ff7f00,
+		0 0.24em #ffff00,
+		0 0.32em #00ff00,
+		0 0.40em #0000ff,
+		0 0.48em #4b0082;
+	
+			
+			
+			">
+			<div class="navlist" style="color:white">
+				<p>
+					<div class="button">
+						<a href="#">wrote</a>
+					</div>
+				</p>
+				<p>
+					<div class="button">
+						<a href="#">code</a>
+					</div>
+				</p>
+				<p>
+					<div class="button">
+						<a href="#">can</a>
+					</div>
+				</p>
+				<p>
+					<div class="button">
+						<a href="#">am </a>
+					</div>
+				</p>
+			</div>
+		</div>
+		<div class="col-1 p-0" style="border: 5px white solid; border-left: 0; min-height: 60vh ;
+		box-shadow:
+		0.04em 0.04em 0 0.04em  #ff0000,
+		0.08em 0.08em 0 0.08em #ff7f00,
+		0.12em 0.12em 0 0.12em #ffff00,
+		0.16em 0.16em 0 0.16em  #00ff00,
+		0.20em 0.20em 0 0.20em  #0000ff,
+		0.24em 0.24em 0 0.24em  #4b0082;
+	
+		
+		
+		
+		">
+
+		</div>
+		<div class="col-2 p-0"></div>
+		<div class="col-12 p-0"></div>
+
+
 	</div>
 
 	<!-- Optional JavaScript -->
@@ -128,9 +213,10 @@
 			if (code == 13) e.preventDefault();
 			if (code == 13) {
 				value = $(this).val();
-				if (value.toUpperCase() === "WORLD") { 
+				if (value.toUpperCase() === "WORLD") {
 					$(this).blur();
-					fader() }
+					fader()
+				}
 				else {
 					$(this).addClass('error');
 					setTimeout(function () {
@@ -140,16 +226,6 @@
 			}
 
 		});
-
-		// function fader() {
-		// 	$("#front").fadeOut(2000).promise().done(function () {
-		// 		$("#second").hide().fadeIn(2000).promise().done(function () {
-		// 			$("#second").fadeOut(2000).promise().done(function () {
-		// 				$("#third").hide().fadeIn(2000);
-		// 			});
-		// 		});
-		// 	});
-		// }
 
 		function fader() {
 			$("#front").fadeOut(2000).promise().done(function () {
@@ -168,30 +244,20 @@
 		var i = 0;
 		var j = 0;
 		var k = 0;
-		var txt1 = 'Hello you! :)';
-		var txt2 = "Welcome to my page!";
-		var txt3 = "";
+		var txt1 = 'Hello you! :)/Welcome to my page!';
 		var speed = 100;
 
 		function typeWriter() {
 
 			if (i < txt1.length) {
-				document.getElementById("typer").innerHTML += txt1.charAt(i);
+				if (txt1.charAt(i) == "/") { document.getElementById("typer").innerHTML += "<br\>" }
+				else {
+					document.getElementById("typer").innerHTML += txt1.charAt(i);
+				}
 				i++;
 				setTimeout(typeWriter, speed);
 			}
-			if (i == txt1.length & j < txt2.length) {
-				if (j == 0) { document.getElementById("typer").innerHTML += "<br/>"; }
-				document.getElementById("typer").innerHTML += txt2.charAt(j);
-				j++;
-				setTimeout(typeWriter, speed);
-			}
-			if (j == txt2.length & k < txt3.length) {
-				if (k == 0) { document.getElementById("typer").innerHTML += "<br/>"; }
-				document.getElementById("typer").innerHTML += txt3.charAt(k);
-				k++;
-				setTimeout(typeWriter, speed);
-			}
+
 
 		}
 
