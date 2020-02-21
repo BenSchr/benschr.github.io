@@ -107,6 +107,17 @@ a, a:hover, a:visited{
 	}
 
 
+	#hint{
+		cursor: pointer;
+	}
+
+	#hint:hover{
+		color: black !important;
+		background-color: white;
+		
+	}
+
+
 
 	/*################# RETRO-BUTTON #######################*/
 
@@ -176,7 +187,7 @@ a, a:hover, a:visited{
 		#typer-block{padding-top: 40vh;font-size: 8vw;}
 		
 		.header{
-
+			white-space: nowrap;
 			font-size:5vw
 			
 		}

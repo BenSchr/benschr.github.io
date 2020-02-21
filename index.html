@@ -26,37 +26,62 @@
 
 <body>
 
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalCenterTitle">"Hello, World!"</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Is usually the first program you write in a new language or framework to learn the basic syntax.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-dark" data-dismiss="modal">ok cool</button>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Front -->
 	<div style="height: 100%; width:100%;background-color: black; z-index: 99; position: absolute;" id="front">
-		<div class="row align-items-center" style="width: 100%; text-align: center; height: 100%;">
-			<div class="col col-1" style="background-color: black; height: 100%; color:grey; white-space: nowrap;">
-						V 0.1.1
+		<div class="row align-items-center p-0 m-0" style="width: 100%; text-align: center; height: 100vh;">
+			<div class="col-1 " >
+				
 			</div>
 
-			<div class="col col-10" style="color: white; font-family: 'Roboto', sans-serif; font-size:200%;">
+			<div class="col-10 " style="color: white; font-family: 'Roboto', sans-serif; font-size:200%;">
 				<span style="display: inline;">Hello, </span>
 				<span style="display: inline;">
 					<input id="input" autocomplete="off" type="text" maxlength="5" style="background-color: black;  outline: 0; color: white;
 				border-width: 0 0 2px; line-height: normal; min-width:85px;
-				border-color: white; text-align: center; display: inline; width: 8%" /><span> ! </span><i
+				border-color: white; text-align: center; display: inline; width: 8%;" /><span> ! </span><i
 						class="fas fa-globe-americas" style="color: white"></i>
 				</span>
 			</div>
-			<!-- <div class="col" style="background-color: black; height: 100%;">
-			</div> -->
 		</div>
-	</div>
-	<div style="height: 100%; display:none" id="second">
-		<div class="row align-items-center" style="width: 100%; text-align: center; height: 100%;">
-			<div class="col">
 
-			</div>
-			<div class="col" style=" font-family: 'Roboto', sans-serif; font-size:200%;">
-				<h1>Welcome :)</h1>
-			</div>
-			<div class="col">
-			</div>
+
+
+		<div style=" color:grey; position: absolute; top:10px; left: 10px;">
+			V 0.1.1
 		</div>
+
+
+		<div id="hint"  data-toggle="modal" data-target="#exampleModalCenter" style=" position:absolute;
+			bottom:10px;
+			right:10px; color:white; border: white solid 0.5px; padding: 10px 20px"><i class="fas fa-lightbulb"></i> HINT</div>
+
 	</div>
+
+	<!-- Typewriter -->
+
 	<div style="height: 100%; display:inherit; " id="third">
 		<div class="row" style="width: 100%; text-align: center; background-color: black; margin:0">
 			<div class="col-12 align-self-start" style="text-align: left;height: 90vh; ">
@@ -75,7 +100,7 @@
 					</div>
 					<div class="col">
 						<div class="arrow bounce" id="scroll1" style="display: none;">
-							<a class="a" href="#">
+							<a class="a" href="#box">
 								<div style="width:100%;height:100%M">
 									<i class="fas fa-arrow-down"></i></div>
 							</a>
@@ -92,10 +117,14 @@
 		</div>
 	</div>
 
+
+	<!-- CONTENT -->
+
 	<div class="row align-items-top" id="4th"
-		style="min-height: 100vh;width:100%;background-color: black; display: none; margin:0; color:white; ">
+		style="min-height: 100vh;width:100%;background-color: black; margin:0; color:white;
+		display: normal;  ">
 		<div class="col-2 p-0"></div>
-		<div class="col-8  align-self-end" style="border: 5px white solid; border-bottom: 0;
+		<div id="box" class="col-8  align-self-end" style="border: 5px white solid; border-bottom: 0;
 			box-shadow:
 		0.16em 0 #ff0000,
 		0.32em 0 #ff7f00,
@@ -108,7 +137,8 @@
 			
 			">
 			<span class="header" style="white-space: wrap; font-family: 'Space Mono';">Check out my
-				<span style="font-weight: 1000;">stuff</span></span></div>
+				<span style="font-weight: 1000;">stuff</span></span>
+			</div>
 		<div class="col-2 p-0"></div>
 
 
@@ -138,28 +168,26 @@
 		0 0.80em #0000ff,
 		0 0.96em #4b0082;
 	
-			
-			
 			">
 			<div class="navlist" style="color:white">
 				<p>
 					<div class="button">
-						<a href="#">Blogs</a>
+						<a href="">Blogs</a>
 					</div>
 				</p>
 				<p>
 					<div class="button">
-						<a href="#">Code</a>
+						<a href="">Code</a>
 					</div>
 				</p>
 				<p>
 					<div class="button">
-						<a href="#">Skills</a>
+						<a href="">Skills</a>
 					</div>
 				</p>
 				<p>
 					<div class="button">
-						<a href="#">About</a>
+						<a href="me.html">About</a>
 					</div>
 				</p>
 			</div>
@@ -178,8 +206,6 @@
 		</div>
 		<div class="col-2 p-0"></div>
 		<div class="col-12 p-0" style="height: 5vh;"></div>
-		
-
 	</div>
 
 	<!-- Optional JavaScript -->
@@ -258,9 +284,22 @@
 
 		}
 
+		$('a[href^="#"]').on('click',function(e) {
+ e.preventDefault();
+ var target = this.hash;
+ var $target = $(target);
+ $('html, body').stop().animate({
+  'scrollTop': $target.offset().top
+ }, 900, 'swing', function () {
+  window.location.hash = target;
+ });
+});
+
 
 
 	</script>
+
+	
 </body>
 
 </html>
