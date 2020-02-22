@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Space+Mono&display=swap:300,300i,400,400i,500,500i,700,700i,900,900i');
 
+
+html, 
+body {
+    height: 100%;
+	margin: 0;
+	width: 100%;
+}
 
 .wrapper {
     display: block;
@@ -25,11 +33,11 @@
     position: fixed;
     /* full screen */
     width: 100vw;
-    height: 100vh;
+    height: 100vh !important;
     /* transparent black */
     background: rgba(0, 0, 0, 0.7);
     /* middle layer, i.e. appears below the sidebar */
-    z-index: 998;
+    z-index: 9998;
     opacity: 0;
     /* animate the transition */
     transition: all 0.5s ease-in-out;
@@ -47,6 +55,7 @@
     /* top right corner of the sidebar */
     top: 10px;
     right: 10px;
+    cursor: pointer;
 }
 
 
@@ -68,16 +77,15 @@ a[data-toggle="collapse"] {
 /*
     ADDITIONAL DEMO STYLE, NOT IMPORTANT TO MAKE THINGS WORK BUT TO MAKE IT A BIT NICER :)
 */
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: #fafafa;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
@@ -92,19 +100,19 @@ a, a:hover, a:focus {
 
 #sidebar {
     /* don't forget to add all the previously mentioned styles here too */
-    background: #7386D5;
+    background: black;
     color: #fff;
     transition: all 0.3s;
 }
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: black;
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 1px solid white;
 }
 
 #sidebar ul p {
@@ -118,16 +126,43 @@ a, a:hover, a:focus {
     display: block;
 }
 #sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
+    color: black !important;
+    background: #fff !important;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: rgb(34, 34, 34);
 }
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: white;
 }
+
+#sidebarCollapse{
+    
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.colheader{
+    
+    font-family: "Roboto";}
+
+table{border-collapse:separate; 
+    border-spacing:0 1em }
+ 
+    svg > g > g:last-child { pointer-events: none }
+
+
+
+    @media screen and (max-width: 1000px) {
+		body{
+            font-size: 1em;
+        }
+	
+	}
