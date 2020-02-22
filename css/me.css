@@ -147,6 +147,7 @@ ul ul a {
     left: 10px;
     cursor: pointer;
     z-index: 99;
+    -webkit-backface-visibility: hidden;
 }
 
 .colheader{
