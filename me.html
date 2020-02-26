@@ -31,10 +31,10 @@
 
       var options = {
         title:"Anatomy",
-        legend: { position: 'top', maxLines: 3 },
+        legend: { position: 'bottom', maxLines: 1 },
         bar: { groupWidth: '75%' },
         isStacked: 'percent',
-        backgroundColor:"#fafafa",
+        chartArea: {'width': '80%', 'height': '70%'},
         
         titleTextStyle:{
               fontSize:"20"
@@ -88,41 +88,47 @@
         <!-- Page Content -->
         <div id="content">
             <div id="sidebarCollapse">
-                <i class="fas fa-bars fa-2x"></i>
+                <span class="fa-stack fa-2x" style="vertical-align: top;">
+                <i class="fas fa-circle fa-stack-2x" style="color: white;"></i>   
+                 <i class="fas fa-bars fa-stack-1x "></i>
+               </span>
             </div>
-            <div class="w-100" style="height:10vh"></div>
-            <div class="row p-0 m-0 w-100 align-items-top" style=" ">
+            </div>
+            <div class="w-100" style="height:5vh"></div>
+            <div class="row p-0 m-0 w-100 align-items-top">
 
-                <div class="col-12 col-sm-6" style="text-align: center;  min-height: 140px; max-height: 500px;">
-
+                <div class="col-12 col-sm-4" style="text-align: center;  min-height: 140px; max-height: 500px;">
+                    <div class="dashcard">
                     <img src="./img/me.png" class="img-fluid" alt="Portrait" data-toggle="tooltip" 
                         data-placement="bottom" title="This 100% relastic picture of me was made with PowerPoint" style="max-height: 400px"></div>
+                    </div>
 
-
-                <div class="col-12 col-sm-6" style="">
+                <div class="col-12 col-sm-4 " style="">
+                    
+                    <div class="dashcard">
+                    <p class="colheader"><i class="fas fa-address-card"></i> Details</p>
                     <hr>
-                    <p class="colheader">Details</p>
-
                     <table class="w-100" style="text-align: left;">
                         <tr>
                             <th>Name</th>
                             <td>Benedikt</td>
                         </tr>
+                        
                         <tr>
-                            <th valign="top">Special Features</th>
+                            <th valign="top">Superpowers</th>
                             <td>
                                 <ul class="list-unstyled components">
-                                    <li><i class="fas fa-angle-right"></i>  Fixing bugs (after making them)</li>
-                                    <li><i class="fas fa-angle-right"></i>  Won't starve for a long time</li>
+                                    <li>  Fixing bugs (after making them),</li>
+                                    <li>  Won't starve for a long time</li>
                                 </ul>
                             </td>
                         </tr>
                         <tr>
-                            <th valign="top">Special Weakness</th>
+                            <th valign="top">Weaknesses</th>
                             <td>
                                 <ul class="list-unstyled components">
-                                    <li><i class="fas fa-angle-right"></i> Youtube Recommendations</li>
-                                    <li><i class="fas fa-angle-right"></i> Writing commit messages</li>
+                                    <li> Youtube-Recommendations,</li>
+                                    <li> Writing commit messages</li>
                                 </ul>
                             </td>
                         </tr>
@@ -134,9 +140,9 @@
                         </tr>
                     </table>
 
-                </div>
+                </div></div>
                 
-                <div class="col-12 col-sm-6"> <div id="donutchart" style="width:100%; height:50vh "></div></div>
+                <div class="col-12 col-sm-4"> <div class="dashcard"> <div id="donutchart" style="width:100%; height:50vh "></div></div></div>
 
 
             </div>
