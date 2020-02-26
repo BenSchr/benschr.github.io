@@ -191,6 +191,10 @@ a, a:hover, a:visited{
 			font-size:5vw
 			
 		}
+
+		.colorbox{
+			max-height:45vh
+		}
 	
 		.navlist{
 			font-size:5vw
@@ -200,5 +204,7 @@ a, a:hover, a:visited{
 		.button a{
 			padding:10px 20px
 		}
+
+
 	
 	}
