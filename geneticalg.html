@@ -20,29 +20,34 @@
 
 <body>
 
-    <div class="row align-items-center" style="width: 100%; text-align: center; height: 100%; margin:0; padding:20px">
-        <div class="col-sm-9 col-12">
+    <div class="row align-items-center" style="width: 100%; min-height:100vh; text-align: center;  margin:0;">
+        <div class="col-xl-1 col-12" style="background-color: inherit; "></div>
+        <div class="col-xl-6 col-lg-8 col-12">
             <div class="row align-items-center" style="width: 100%; text-align: center; height: 100%; margin:0;">
+
                 <!-- CUR GEN -->
-                <div class="col-sm-6 col-12 " style="height:45%; margin-bottom: 50px;">
+                <div class="col-sm-6 col-12 " style="height:45%; padding:20px">
+
                     <h5>Current Generation</h5>
-                    <div id="curplt" style="max-height: 40vh;margin-left:1vw"> </div>
+
+                    <div id="curplt" style="max-height: 35vh;"> </div>
                 </div>
                 <!-- ---------------------------------------- -->
 
                 <!-- Fitness Plot -->
 
-                <div class="col-sm-6 col-12 align-self-start" style="height:45%;">
+                <div class="col-sm-6 col-12 align-self-center" style="height:45%; padding: 20px;">
                     <h5>Performance</h5>
-                    <div id="fitplt" style="height:auto;max-height: 40vh;margin-left:1vw"> </div>
+
+                    <div id="fitplt" style="max-height: 35vh;"> </div>
                 </div>
                 <!-- ---------------------------------------- -->
 
                 <!-- BEST GEN -->
 
-                <div class="col-12 col-sm-6 " style="height:45%; ">
+                <div class="col-12 col-sm-6 " style="height:45%; padding: 20px; ">
                     <h5>Best Generation</h5>
-                    <div id="bestplt" style="height:auto;max-height: 40vh;margin-left:1vw"> </div>
+                    <div id="bestplt" style="max-height: 35vh;"> </div>
                 </div>
                 <!-- ---------------------------------------- -->
 
@@ -50,35 +55,36 @@
 
                 <!-- STATS -->
 
-                <div class="col-sm-6 col-12">
-                    <table class="table" style="width:60%; margin-left:20%;margin-bottom:20px;">
-                        <tbody>
-                            <tr>
-                                <th scope="row">Current Gen</th>
-                                <td id="stat_curgen">Mark</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Current Distance</th>
-                                <td id="stat_curdist"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Best Gen</th>
-                                <td id="stat_bestgen"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Best Distance</th>
-                                <td id="stat_bestdist"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
+                <div class="col-sm-6 col-12 row align-items-center" style="height:45%; padding: 20px;">
+                    <div class="col-12">
+                        <table class="table" style="width:60%; margin-left:20%;margin-bottom:20px;">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Current Gen</th>
+                                    <td id="stat_curgen">0</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Current Distance</th>
+                                    <td id="stat_curdist">-</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Best Gen</th>
+                                    <td id="stat_bestgen">-</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Best Distance</th>
+                                    <td id="stat_bestdist">-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <!-- ---------------------------------------- -->
             </div>
         </div>
-
-        <div class="col  col-sm-3 col-12 order-first order-lg-3 " style=" margin-bottom:20px;">
+        <div class="col-lg-1 col-12" style="background-color: inherit; "></div>
+        <div class="col-lg-3 col-12" style=" padding:20px">
 
             <div class="row align-items-center " style="text-align: left;">
                 <label for="drawOpt" class="col-4 col-form-label">Mode</label>
@@ -96,12 +102,13 @@
                 <div class="col-2">10</div>
             </div>
             <div class="row align-items-center " style="text-align: left;">
-                <div class="col-12"><button type="button" class="btn btn-secondary  btn-md btn-block"
-                        onclick="redraw()">
-                        Redraw</button></div>
+                <div class="col-12"><button type="button" class="btn btn-dark  btn-lg btn-block" onclick="redraw()">
+                    <i class="fas fa-redo"></i> Redraw</button></div>
             </div>
 
-            <div class="col-12"><hr/></div>
+            <div class="col-12">
+                <hr />
+            </div>
 
             <div class="row align-items-center " style="text-align: left;">
                 <label for="populationSize" class="col-4 col-form-label">Population</label>
@@ -125,18 +132,20 @@
                 <div class="col-2">10</div>
             </div>
 
-            <div class="col-12"><hr/></div>
-
-            <button type="button" id="play" class="btn btn-secondary  btn-lg btn-block" onclick="toggleplay()">Start</button>
-            <button type="button" class="btn btn-secondary  btn-lg btn-block" onclick="pause()">Pause</button>
-            <button type="button" class="btn btn-secondary  btn-lg btn-block" onclick="manStep()">1Step</button>
+            <div class="col-12">
+                <hr />
+            </div>
+            
+            <button type="button" id="play" class="btn btn-dark btn-lg btn-block" onclick="toggleplay()"><i
+                    class="fas fa-play"></i> Start</button>
+            <button type="button" class="btn  btn-dark btn-lg btn-block" onclick="manStep()"><i
+                    class="fas fa-step-forward"></i> Step</button>
         </div>
-        <div class="col-md-1 order-last col-0"></div>
-    </div>
-    </div>
+        <div class="col-sm-1 col-12" style="background-color: inherit; "></div>
     </div>
 
-    <!-- COL 3 -->
+
+
 
 
 
@@ -186,14 +195,14 @@
         var e = document.getElementById("eliteSize").value   //Elite
 
         var running = false
-        var pauseflag= false
+        var pauseflag = false
 
         function pause() {
-            pauseflag=true
+            pauseflag = true
         }
 
-        function manStep(){
-            if(running==false){
+        function manStep() {
+            if (running == false) {
                 oneStep()
             }
         }
@@ -208,31 +217,31 @@
         }
 
         async function start() {
-            running=true
-            pauseflag=false
+            running = true
+            pauseflag = false
             while (g < 1001) {
                 oneStep()
                 await Sleep(100);
                 if (pauseflag) break;
             }
-            running=false
+            running = false
         }
 
-        function toggleplay(){
-            if(running==false){
+        function toggleplay() {
+            if (running == false) {
                 start()
-                document.getElementById("play").innerHTML="Pause"
+                document.getElementById("play").innerHTML = "<i class='fas fa-pause'></i> Pause"
             }
-            else{
+            else {
                 pause()
-                document.getElementById("play").innerHTML="Start"
+                document.getElementById("play").innerHTML = "<i class='fas fa-play'></i> Start"
             }
-            
+
         }
 
         function redraw() {
-            if(running){toggleplay()}
-            g=0
+            if (running) { toggleplay() }
+            g = 0
             GA = new GenAlg()
             drawer = new Drawer()
             if (drawOption === "circle") {
@@ -246,6 +255,7 @@
 
             drawer.drawPoints(cities, curplt);
             drawer.drawPoints(cities, bestplt);
+            drawer.drawPerformance(GA.getPerf(), fitplt)
         }
 
 
