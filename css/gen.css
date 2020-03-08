@@ -1,9 +1,13 @@
-.canvas{
-	width: auto;  height: 80% }
 
-.canvasrow{
-	height:80%; font-family: 'Roboto', sans-serif; font-size:2em; margin:0
+html, 
+body {
+    height: 100%;
+	margin: 0;
+    width: 100%;
+	font-family: 'Roboto', sans-serif;
 }
+
+
 
 
 
@@ -57,17 +61,8 @@
 		font-weight: bold;
 	  }
 
-
-      
-	@media screen and (max-width: 600px) {
-		.canvas{
-
-			width:100%;  height:auto		}
-	
-			.canvasrow{
-				height:auto; font-family: 'Roboto', sans-serif; font-size:1em; margin:0
-			}
-	
-		
-	
-	}
+	  .dashcard{
+		box-shadow: 
+		0 10px 20px rgba(0,0,0,0.19),
+		 0 6px 6px rgba(0,0,0,0.23);
+		background-color: white;}
