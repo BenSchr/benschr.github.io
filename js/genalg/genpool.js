@@ -26,6 +26,11 @@ class GenAlg {
             singlePop["Route"] = this.shuffleCities(this.cities)
             this.genobj["CurrGen"]["Pop"].push(singlePop)
         }
+
+        this.calcFitness()
+        this.performance["x"].push(0)
+        this.performance["y"].push(this.genobj["CurrGen"]["BestFit"])
+
     }
 
     nextStep(g, p, m, e) {

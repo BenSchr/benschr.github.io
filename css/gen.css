@@ -15,12 +15,21 @@ body {
 		border-color: #76d275;
 		color:black
 	}
-	/* .btn:active, .btn:focus, .btn:visited{
-		background-color: #76d275;
-		border-color: #76d275;
-		color:black
-	} */
+	
+	#infobar{
+		position: fixed;
+		bottom:50;
+		right:50;
+	}
 
+	.infolink, .infolink:hover,.infolink:active,.infolink:visited{
+		text-decoration: none;
+		color:white;
+	}
+	.infolink i:hover{
+		color:lightgray !important;
+		size: 10;
+	}
 
 
 

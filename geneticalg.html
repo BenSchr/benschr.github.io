@@ -15,7 +15,7 @@
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-    <title>Title</title>
+    <title>Genetic Algorithm</title>
 </head>
 
 <body>
@@ -103,11 +103,11 @@
             </div>
             <div class="row align-items-center " style="text-align: left;">
                 <div class="col-12"><button type="button" class="btn btn-dark  btn-lg btn-block" onclick="redraw()">
-                    <i class="fas fa-redo"></i> Redraw</button></div>
+                        <i class="fas fa-redo"></i> Redraw</button></div>
             </div>
 
             <div class="col-12">
-                <hr />
+                <hr style="border-color:grey" />
             </div>
 
             <div class="row align-items-center " style="text-align: left;">
@@ -133,9 +133,9 @@
             </div>
 
             <div class="col-12">
-                <hr />
+                <hr style="border-color:grey" />
             </div>
-            
+
             <button type="button" id="play" class="btn btn-dark btn-lg btn-block" onclick="toggleplay()"><i
                     class="fas fa-play"></i> Start</button>
             <button type="button" class="btn  btn-dark btn-lg btn-block" onclick="manStep()"><i
@@ -144,7 +144,21 @@
         <div class="col-sm-1 col-12" style="background-color: inherit; "></div>
     </div>
 
+    <div id="infobar">
+        
+        <a class="infolink" href="" style="margin-right: 10px;">
+            <i class="fab fa-github-square fa-2x"></i>
+        </a>
 
+        <a class="infolink" href="https://www.linkedin.com/in/benedikt-schr%C3%B6ter-1692a3183/" style="margin-right: 10px;">
+            <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+
+        <a class="infolink" href="https://www.xing.com/profile/Benedikt_Schroeter2/cv" style="margin-right: 10px;">
+            <i class="fab fa-xing-square fa-2x"></i>
+        </a>
+    </div>
+    </div>
 
 
 
@@ -214,6 +228,7 @@
             drawer.drawPerformance(GA.getPerf(), fitplt)
             setStats();
             g++
+
         }
 
         async function start() {
@@ -241,7 +256,7 @@
 
         function redraw() {
             if (running) { toggleplay() }
-            g = 0
+            g = 1
             GA = new GenAlg()
             drawer = new Drawer()
             if (drawOption === "circle") {
@@ -251,7 +266,6 @@
             cities = GA.getCities();
             GA.createFirstPop(p);
             GA.calcFitness();
-            GA.getStats();
 
             drawer.drawPoints(cities, curplt);
             drawer.drawPoints(cities, bestplt);
