@@ -193,7 +193,8 @@ a, a:hover, a:visited{
 		}
 
 		.colorbox{
-			max-height:45vh
+			 max-height:50vh;
+			 min-height:350px
 		}
 	
 		.navlist{
