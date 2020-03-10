@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/blog.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <title>Welcome</title>
+</head>
+
+<body>
+
+    <!-- Dark Overlay element -->
+    <div class="overlay"></div>
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div id="dismiss">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li>
+                <a href="index.html"> <i class="fas fa-home"></i>&nbsp;&nbsp;&nbsp;Home</a>
+            </li>
+            <li class="active">
+                <a href="#"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;&nbsp;Blog</a>
+            </li>
+            <li>
+                <a href="#"> <i class="fas fa-code"></i>&nbsp;&nbsp;&nbsp;Code</a>
+            </li>
+            <li>
+                <a href="#"> <i class="fas fa-address-card"></i>&nbsp;&nbsp;&nbsp;About</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="header">
+        <div class="row h-100 align-items-center">
+            <div class="col-2"><i id="sidebarCollapse" class="fas fa-bars fa-lg"
+                    style="color: white; margin-left: 20px;"></i></div>
+
+            <div class="col-7" style="text-align: center;color: white;">
+                <h5 class="m-0">Blog</h5>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row content m-0 align-items-center">
+        
+        <div class="col-12">Hello</div>
+        
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+<script type="text/javascript">
+
+    $('#dismiss, .overlay').on('click', function () {
+        // hide sidebar
+        $('#sidebar').removeClass('active');
+        // hide overlay
+        $('.overlay').removeClass('active');
+    });
+
+    $('#sidebarCollapse').on('click', function () {
+        // open sidebar
+        $('#sidebar').addClass('active');
+        // fade in the overlay
+        $('.overlay').addClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+
+
+
+
+</script>
+
+</html>

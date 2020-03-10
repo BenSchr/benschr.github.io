@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Space+Mono&display=swap:300,300i,400,400i,500,500i,700,700i,900,900i');
 
 
-
+/*################# Scroller #######################*/
 /* width */
 ::-webkit-scrollbar {
 	width: 10px;
@@ -21,6 +21,8 @@
   ::-webkit-scrollbar-thumb:hover {
 	background: #555; 
   }
+
+/*###################################################*/
 
 html, 
 body {
