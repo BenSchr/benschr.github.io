@@ -203,14 +203,20 @@ a, a:hover, a:visited{
 		max-height:60vh;
    }
 
-		  
+   .navlist{
+	font-size:1vw
+}
+	
+
+
 	@media screen and (max-width: 1000px) {
-		#typer-block{padding-top: 40vh;font-size: 8vw;}
+		#typer-block{
+			padding-top: 40vh;
+			font-size: 8vw;}
 		
 		.header{
 			white-space: nowrap;
-			font-size:5vw
-			
+			font-size:5vw	
 		}
 
 		.colorbox{
